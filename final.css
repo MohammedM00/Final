@@ -1,0 +1,189 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 50px);
+    width: 100%;
+  }
+  html {
+    background-image: url("cyber.jpg");
+    background-repeat: none;
+    background-size: cover;
+  }
+  
+  .wrapper {
+    display: flex;
+    grid-column: 3;
+    grid-row: 9/14;
+    align-items: center;
+  }
+  .box {
+    display: flex;
+    grid-column: 2/5;
+    grid-row: 5/15;
+  }
+  h3 {
+    color: cyan;
+  }
+  header {
+    grid-column: 2/5;
+    grid-row: 2/4;
+    /* background-color: aqua; */
+    text-decoration: #165e5e;
+    border-radius: 10px;
+    text-align: center;
+  }
+  h1 {
+    color: cyan;
+    font-size: 3em;
+    text-decoration: underline;
+    background-color: black;
+  }
+  
+  nav {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    background-color: black;
+    opacity: .6;
+    text-align: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: cyan;
+    margin-left: 30px;
+    text-align: center;
+  }
+  .flip-card-back p a {
+    text-decoration: none;
+    color: cyan;
+  }
+  aside {
+    grid-column: 2/5;
+    grid-row: 5/9;
+    background-color: black;
+    text-align: center;
+    opacity: .85;
+  }
+  aside p{
+    color: cyan;
+  }
+  article {
+    grid-column: 1/6;
+    grid-row: 5/14;
+    background-color: black;
+    border-radius: 15px;
+    border-color: cyan;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    opacity: .85;
+    /* text-align: center; */
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
+  article h2 {
+    color: cyan;
+    text-align: center;
+  }
+  article li {
+    color: cyan;
+  }
+  article p {
+    color: cyan;
+  }
+  
+  footer {
+    grid-column: 1/5;
+    grid-row: 11/12;
+    background-color: blueviolet;
+  }
+  
+  @media screen and (max-width: 700px) {
+    article {
+        grid-column: 2/5;
+        grid-row: 5/9;
+        margin-top: 20px;
+        align-items: center;
+    }
+    .container {
+        grid-column: 1/5;
+        grid-row: 9/13;
+        display: inline-block;
+    }
+  
+    footer {
+        grid-column: 1/5;
+        grid-row: 13/14;
+        background-color: black;
+        text-decoration: cyan;
+    }
+    .wrapper {
+      display: block;
+      align-content: center;
+    }
+  }
+  
+  
+   .flip-card {
+      width: 220px;
+      height: 340px;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      margin: 20px;
+      margin-left: 80px;
+      padding-bottom: 10px;
+    }
+    .flip-card img {
+      width: 100%;
+      height: 340px;
+    }
+    
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+    
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: cyan;
+      color: black;
+    }
+    
+    /* Style the back side */
+    .flip-card-back {
+      background-color: cyan;
+      transform: rotateY(180deg);
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      /* width: 220px;
+      height: 350px; */
+  
+    }
+  
+    .flip-card-back p {
+      margin-top: 20px;
+      color: black;
+    }
+    .flip-card-back h3 {
+      margin-top: 20px;
+      color: black;
+    }
